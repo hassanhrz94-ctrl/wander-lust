@@ -14,6 +14,7 @@ import {
 } from "@heroui/react";
 import { BiEdit } from "react-icons/bi";
 
+
 export function EditModal({ destination }) {
   const {
     _id,

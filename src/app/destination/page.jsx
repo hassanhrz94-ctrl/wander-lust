@@ -1,4 +1,5 @@
 import DestinationCard from '@/components/DestinationCard';
+import Link from 'next/link';
 import React from 'react';
 
 const DestinationPage = async() => {
@@ -13,6 +14,7 @@ const DestinationPage = async() => {
             {
                 destinations.map((destination)=><DestinationCard key={destination._id} destination={destination}/>)
             }
+         
            </div>
         </div>
     );
