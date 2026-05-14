@@ -1,3 +1,6 @@
+
+
+import BookingCard from "@/components/BookingCard";
 import { DeleteAlert } from "@/components/DeleteAlert";
 import { EditModal } from "@/components/EditModal";
 import { Button } from "@heroui/react";
@@ -14,7 +17,7 @@ const DestinationDetailsPage = async ({ params }) => {
 
   const { imageUrl, price, destinationName, duration, country, description } =
     destination;
-
+            
   return (
     <div className="max-w-7xl mx-auto">
       <div className="flex  items-center gap-3 justify-end mt-5 mb-3">
@@ -29,7 +32,7 @@ const DestinationDetailsPage = async ({ params }) => {
         width={800}
       />
 
-      <div className="p-2">
+      <div className="p-2 flex flex-col gap-5">
         <div className="flex items-center gap-1">
           <LuMapPin /> <span>{country}</span>
         </div>
@@ -42,10 +45,7 @@ const DestinationDetailsPage = async ({ params }) => {
               <FaRegCalendar /> {duration}
             </div>
           </div>
-
-          <div>
-            <h3 className="text-2xl font-bold">$ {price}</h3>
-          </div>
+<BookingCard destination={destination} />
         </div>
 
         <h1 className="mt-10 text-2xl font-bold">Overview</h1>
